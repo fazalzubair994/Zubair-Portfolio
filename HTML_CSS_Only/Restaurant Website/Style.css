@@ -1,0 +1,186 @@
+*{
+    margin: 0px; padding: 0px;
+}
+body{
+    
+    font-family: "Roboto", sans-serif;
+}
+.navigationbar{
+    background-color: white;
+    box-shadow: 5px 5px 5px rgba(1, 1, 1, 0.05);
+    padding: 10px;
+    top: 0;
+    position: sticky;
+    padding-left: 20px;
+    z-index: 50;
+    padding-right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#manubutton span{
+    font-size: 50px;
+}
+.heroSection{
+    display: flex;
+    margin: 30px;
+    padding: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+#herosectionPhoto
+{
+    width: 50%;
+}
+
+#herosectionText{
+margin-left: 120px;
+display: flex;
+gap: 20px;
+flex-direction: column;
+}
+
+
+#herosectionText h4{
+    background-color: #149f39;
+    color: white;
+    margin-left: 5px;
+    padding: 5px 10px;
+    align-self: flex-start;
+}
+
+#herosectionText h1{
+    font-weight: 400;
+    font-size: 72px;
+}
+
+#herosectionText p{
+    font-weight: 400;
+    font-size: 20px;
+}
+
+#herosectionText button{
+    font-weight: 400;
+    font-size: 16px;
+    padding: 10px;
+    border: 0;
+    background-color: orange;
+    align-self: flex-start;
+}
+
+.cards
+{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.card{
+    margin-bottom: 50px;
+    margin-top: 100px;
+    max-width: 350px;
+    padding: 20px;
+    max-height: 80px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+
+}
+.card:hover {
+    transform: scale(1.04);
+    box-shadow: 3px 5px 5px rgba(1, 1, 1, 0.5);
+    transition: 0.2s ease-in-out;
+  }
+  .card div{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+.card img{
+    height: 72px;
+}
+
+hr{
+    margin: 10px;
+}
+
+.menu{
+    margin-top: 50px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+
+}
+h4{
+    background-color: #149f39;
+    color: white;
+    margin-left: 5px;
+    padding: 5px 10px;
+}
+
+.grid{
+    margin: 50px;
+    display: grid;
+    gap: 10px;
+    grid-template-areas:
+        "I1 I1 I2 I3"
+        "I1 I1 I2 I7"
+        "I4 I5 I6 I7";
+}
+.grid_images{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.grid_images:hover{
+    transform: scale(1.04);
+    box-shadow: 3px 5px 5px rgba(1, 1, 1, 0.5);
+    transition: 0.2s ease-in-out;
+}
+#item1{
+    grid-area: I1;
+}
+
+#item2{
+    grid-area: I2;
+}
+
+#item3{
+    grid-area: I3;
+}
+
+#item4{
+    grid-area: I4;
+}
+
+#item5{
+    grid-area: I5;
+}
+
+#item6{
+    grid-area: I6;
+}
+#item7{
+    grid-area: I7;
+}
+
+.footer_area{
+    background-color: #fff0db;;
+    display: flex;
+    padding: 50px;
+    justify-content: space-evenly;
+}
+
+.footerLinks{
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.footerLinks input{
+    padding:6px 20px;
+}
