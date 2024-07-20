@@ -1,0 +1,135 @@
+* {
+  margin: 0px;
+}
+body {
+  background-color: #454545;
+  color: white;
+}
+
+header {
+  padding: 20px;
+  font-size: 40px;
+  font-weight: bolder;
+  text-align: center;
+  background-color: darkblue;
+  color: white;
+}
+
+.container {
+  background-color: #555555;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.recipeList {
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  align-items: center;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px;
+}
+
+.recipeList:hover {
+  box-shadow: 0px 0px 10px hotpink;
+}
+
+.recipeList img {
+  width: 150px;
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.recipeList p {
+  max-height: 200px;
+  width: 80%;
+  overflow: hidden;
+  font-size: 18px;
+}
+
+.recipeList p span {
+  font-size: 20px;
+
+  font-weight: bold;
+}
+
+.recipeList h1 {
+  padding: 5px;
+  text-align: center;
+  font-size: 25px;
+  width: 30%;
+}
+
+.recipeList a {
+  padding: 10px;
+  display: flex;
+  margin-left: 20px;
+  min-width: 100px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: darkblue;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bolder;
+}
+
+.recipeList a:hover {
+  background-color: orangered;
+}
+
+@media screen and (max-width: 786px) {
+  .recipeList {
+    flex-direction: column;
+    width: 100%;
+    margin: 5px;
+    max-height: auto;
+  }
+
+  .recipeList img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 10px;
+  }
+
+  .recipeList h1 {
+    padding: 5px;
+    text-align: center;
+    height: auto;
+    width: 100%;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .recipeList p {
+    height: auto;
+    max-height: 100px;
+    font-size: 14px;
+    width: 95%;
+    margin-bottom: 10px;
+  }
+
+  .recipeList a {
+    height: auto;
+    width: 90%;
+    overflow: hidden;
+    font-size: 14px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    box-sizing: border-box;
+    max-width: 100%; /* Ensure it doesn't exceed the container */
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Ensure overflow text is hidden */
+    text-overflow: ellipsis; /* Add ellipsis for overflow text */
+  }
+}

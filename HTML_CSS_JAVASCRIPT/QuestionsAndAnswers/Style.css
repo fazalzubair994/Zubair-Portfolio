@@ -1,0 +1,40 @@
+body {
+  display: flex;
+  justify-content: center;
+}
+.QuestionContainer {
+  padding: 10px 50px;
+  width: 500px;
+  box-shadow: 0px 0px 4px;
+  border-radius: 10px;
+  margin: 20px;
+}
+
+.answer {
+  display: none;
+}
+.showAnswer {
+  display: block;
+}
+.question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+h3 {
+  color: rgb(137, 218, 16);
+}
+.question button {
+  border-color: rgb(137, 218, 16);
+  color: rgb(137, 218, 16);
+  background-color: transparent;
+  border-radius: 5px;
+  font-size: 20px;
+  min-height: 30px;
+  min-width: 30px;
+}
+button:hover {
+  color: orangered;
+  border-color: orangered;
+  cursor: pointer;
+}

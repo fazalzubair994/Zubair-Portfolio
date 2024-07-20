@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dictionary App</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>English Dictionary</h1>
+
+        <div class="searchword">
+            <input id="word" type="text" placeholder="Word to search">
+            <button id="button">Search</button>
+        </div>
+    </header>
+
+    <main>
+
+    </main>
+
+
+    <script>
+        let word = document.getElementById('word');
+        let button = document.getElementById('button');
+
+        button.addEventListener('click', () => {
+            let SearchedWord = word.value;
+            getDefinition(SearchedWord);
+        })
+
+        //<br> "${data[0].meanings[0].definitions[1].definition}" </span>
+        //<br> "${data[0].meanings[0].definitions[1].example}"
+        function getDefinition(word) {
+            console.log(word);
+            let fetchedData = fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/ ${word}`).then(function (response) {
+                return response.json();
+            })
+                .then(function (data) {
+                    console.log(data[0]);
+                    console.log(data[0].meanings[0].definitions[0].definition);
+
+                    let wordName = data[0].word;
+                    let Definitions = '';
+                    let Examples = '';
+                    for (let i = 0; i < data[0].meanings[0].definitions.length; i++) {
+                        let def = data[0].meanings[0].definitions[i].definition;
+
+                        Definitions += `"${def}" <br>`;
+                    }
+
+                    for (let i = 0; i < data[0].meanings[0].definitions.length; i++) {
+                        let exa = data[0].meanings[0].definitions[i].example;
+                        if (exa)
+                            Examples += `"${exa}" <br>`;
+                    }
+
+
+                    // data[0].meanings[0].definitions.foreach((def) => {
+                    //     Examples += "<br>" + def.example;
+                    // })
+                    loadDefinitions(wordName, Definitions, Examples);
+
+                });
+
+
+        }
+
+        function loadDefinitions(word, definitions, examples) {
+            let markup = `<div class="Searchedword"><h1>${word}</h1>
+            <h2>Definitions: <br><span>${definitions}</span> </h2>
+            <h2>Examples:<br> <span>"${examples}" </span> </h2></div>`;
+            document.querySelector('main').insertAdjacentHTML('beforeend', markup);
+        }
+    </script>
+</body>
+
+</html>

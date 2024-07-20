@@ -1,0 +1,46 @@
+
+body{
+    background-image: url('back.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: sans-serif;
+}
+.container{
+    display: flex;
+    gap: 20px;
+}
+.UI{
+    box-shadow: 0px 0px 10px;
+    border-radius:5px;
+display: inline-block;
+max-width: 100px;
+min-width: 100px;
+text-align: center;
+backdrop-filter: blur(10px);
+}
+h4{
+    margin: 0px;
+    padding: 5px 20px;
+    opacity: 0.8;
+    color: white;
+    background-color: rgba(0,0,130,1);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+   
+}
+h1{
+    font-size: 45px;
+    margin: 15px 0px;
+}
+#period{
+    background-color: hotpink;
+    border-radius:5px;
+    height: 20px;
+
+    align-self: flex-end;
+}

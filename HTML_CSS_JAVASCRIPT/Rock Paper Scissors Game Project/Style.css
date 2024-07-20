@@ -1,0 +1,84 @@
+body{
+    background-color: #414141;
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+#headings
+{
+    font-size: 36px;
+}
+.buttons{
+    display: flex;
+    justify-content: center;
+
+}
+hr{
+    margin: 0px 40px;
+}
+.customBtn{
+    text-align: center;
+    font-size: 20px;
+    color: white;
+}
+.scoreboard{
+    display: flex;
+    gap: 10px;
+    justify-content:center;
+    align-items: center;
+}
+button{
+    background-color: transparent;
+    background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border: none;
+    padding: 0px;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    margin: 10px;
+    
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, .2);
+}
+
+#RockBtn{
+background-image: url("photos/rock.png"); 
+}
+#PaperBtn {
+    background-image: url("photos/paper.png");
+}
+#ScissorsBtn {
+    background-image: url("photos/scissors.png");
+}
+button:hover{
+    transition-property: all;
+    transition-duration: .5s;
+    transition-timing-function: ease;
+    transform: rotate(-90deg);
+    box-shadow: 0px 0px 15px rgba(255, 253, 105, 0.8);
+
+}
+
+button:active {
+    transition-duration: 0s;
+    transform: rotate(-90deg);
+    box-shadow: 0px 0px 25px rgba(255, 105,180, 1);
+}
+h3{
+    font-size: 25px;
+}
+#TieLabel {
+    padding: 5px 15px;
+    visibility:collapse;
+    color: lightcoral;
+    border-radius: 10px;
+}
+span{
+
+    
+    color: chocolate;
+}
