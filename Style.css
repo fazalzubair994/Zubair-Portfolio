@@ -191,20 +191,6 @@ main {
   }
 
   .hero_image {
-    height: 70%;
-  }
-
-  .hero div {
-    line-height: 1.2;
-  }
-}
-@media (max-width: 400px) {
-  .hero {
-    flex-direction: column;
-    justify-content: space-evenly;
-  }
-
-  .hero_image {
     margin-top: 20%;
     height: 50%;
   }
@@ -218,6 +204,7 @@ main {
     font-size: 18px;
   }
 }
+
 /* Footer Styling */
 footer {
   background-image: linear-gradient(to right, #045c60 0%, #1b8db6 100%);
