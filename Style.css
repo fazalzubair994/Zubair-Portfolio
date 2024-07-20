@@ -1,0 +1,284 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+html,
+body {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  scrollbar-width: 10px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  line-height: 1.4;
+  height: 100vh;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+}
+
+header {
+  padding: 10px 20px;
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: 1000;
+  color: white;
+  font-size: 20px;
+  background-image: linear-gradient(to right, #06858b 0%, #1eb8c0 100%);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+nav {
+  margin-right: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+ul {
+  list-style-type: none;
+  gap: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.tabs {
+  text-decoration: none;
+  color: white;
+  font-weight: bolder;
+  border-bottom: 4px solid orangered;
+  border-color: transparent;
+  padding-bottom: 3px;
+  transition: all;
+  transition-duration: 0.5s;
+}
+.tabs:hover {
+  border-color: orange;
+}
+
+main {
+  height: 80%;
+  background-image: linear-gradient(to right, #17768b, #0083b0);
+}
+
+.hero {
+  height: 100%;
+  color: white;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.hero div {
+  text-align: center;
+  line-height: 2;
+  font-size: 2rem;
+}
+
+.hero div span {
+  color: orange;
+  font-size: 3rem;
+}
+
+.hero_image {
+  height: 80%;
+}
+
+#animated-text {
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  letter-spacing: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+
+  border-right: 6px solid orange;
+  animation: typing 5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+.Projects {
+  border-top: 5px solid orangered;
+  padding-top: 30px;
+  background-image: linear-gradient(to right, #154d5a, #0083b0);
+  color: white;
+}
+
+.ProjectContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+  flex-wrap: wrap;
+}
+.projectHeader {
+  font-size: 2rem;
+}
+.projectDescription {
+  font-size: 1rem;
+  padding: 0px 50px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 300px;
+  height: 380px;
+  background-color: #0083b0;
+  border-radius: 10px;
+  transition-property: all;
+  transition-duration: 0.3s;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 10px;
+}
+.card:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 0px 5px;
+}
+
+.imageArea {
+  height: 60%;
+}
+.buttonArea {
+  height: 40%;
+  padding: 5px;
+  padding-bottom: 40px;
+  background-color: #0083b0;
+  transition-property: all;
+  transition-duration: 0.3s;
+  text-align: center;
+}
+.buttonArea p {
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+.buttonArea a {
+  color: orange;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
+}
+
+@media (max-width: 786px) {
+  .hero {
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .hero_image {
+    height: 70%;
+  }
+
+  .hero div {
+    line-height: 1.2;
+  }
+}
+
+/* Footer Styling */
+footer {
+  background-image: linear-gradient(to right, #045c60 0%, #1b8db6 100%);
+  color: white;
+  padding: 20px;
+  font-size: 16px;
+  border-top: 1px solid #dee2e6;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-text {
+  max-width: 60%;
+}
+
+.footer-text h2 {
+  margin-top: 0;
+}
+
+.footer-text p {
+  margin: 10px 0;
+}
+.footer-text p a {
+  color: orange;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+}
+
+.footer-links a {
+  color: #06858b;
+  text-decoration: none;
+  margin: 5px 0;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-social {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-social h3 {
+  margin-top: 0;
+}
+
+.footer-social a {
+  color: orange;
+  text-decoration: none;
+  margin: 5px 0;
+}
+
+.footer-social a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+/* For WebKit browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 12px; /* Adjust width of the scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(to right, #7bc8cc 0%, #1b8db6 100%);
+}
+
+::-webkit-scrollbar-track {
+  background: #075977; /* Darker background color for the track */
+}
